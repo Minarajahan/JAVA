@@ -1,0 +1,124 @@
+Name and ID----------------------------------------------------------------------
+
+Name: Akter Ratre (202322240320)
+Name: Jahan Minara (202322240308)
+
+
+Java Code -------------------------------------------------------------
+
+01/ public class Main {
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 30;
+        int num3 = 50;
+        int max = num1;
+        if(num2 > max) {
+            max = num2;
+        }
+        if(num3 > max) {
+            max = num3;
+        }
+        System.out.println("The maximum number is: " + max);
+        }
+    }
+
+
+02/public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num = scanner.nextInt();
+        boolean isPrime = true;
+
+        if (num <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime) {
+            System.out.println("This is a Prime Number");
+        } else {
+            System.out.println("This is not a prime number");
+        }
+    }
+}
+
+
+03/ public class Main {
+    public static void main(String[] args) {
+        for (int num = 1; num <= 100; num++) {
+            boolean isPrime = true;
+
+            for (int i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+}
+
+04/
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        int asciiSum = 0;
+
+        for (int i = 0; i < name.length(); i++) {
+            asciiSum += (int) name.charAt(i);
+        }
+
+        boolean isPrime = true;
+        if (asciiSum <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(asciiSum); i++) {
+                if (asciiSum % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        System.out.println("The sum of ASCII values is: " + asciiSum);
+
+        if (isPrime) {
+            System.out.println("The sum is a prime number.");
+        } else {
+            System.out.println("The sum is not a prime number.");
+        }
+
+    }
+}
+
+
+09/
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int terms = scanner.nextInt();
+        System.out.print("Fibonacci Sequence: ");
+        int num1 = 0, num2 = 1;
+
+        for (int i = 1; i <= terms; i++) {
+            System.out.print(num1 + " ");
+
+            int nextNum = num1 + num2;
+            num1 = num2;
+            num2 = nextNum;
+        }
+
+    }
+}
